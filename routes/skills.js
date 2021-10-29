@@ -13,15 +13,6 @@ router.post("/", skillsCtrl.create)
 
 router.delete("/:id", skillsCtrl.delete)
 
-app.get('/skills', function (req, res) {
-	todoDb.find({}, function (error, skills) {
-		res.render('skills/index', {
-			skills: skills,
-			error: error,
-		})
-	})
-})
-
 
 export {
   router

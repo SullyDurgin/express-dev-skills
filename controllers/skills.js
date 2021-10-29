@@ -1,4 +1,4 @@
-import * as SkillDb from "../data/Skill-db.js"
+import * as skillDb from "../data/skill-db.js"
 
 function index(req, res) {
   console.log(req.time)
@@ -13,7 +13,7 @@ function index(req, res) {
 
 function show(req, res) {
   console.log(req.params.id)
-  skillDb.findById(req.params.id, function(error, skill) {
+   skillDb.findById(req.params.id, function(error, skill) {
     console.log(skill)
     res.render("skills/show", {
       skill: skill,
